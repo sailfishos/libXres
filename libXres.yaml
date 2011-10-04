@@ -1,0 +1,22 @@
+Name: libXres
+Summary: X.Org X11 libXres runtime library
+Version: 1.0.4
+Release: 0
+Group: System/Libraries
+License: MIT
+URL: http://www.x.org
+Sources:
+    - http://xorg.freedesktop.org/releases/individual/lib/%{name}-%{version}.tar.bz2
+
+PkgConfigBR:
+    - x11
+    - xext
+    - resourceproto
+Configure: configure
+SubPackages:
+    - Name: devel
+      Summary: X.Org X11 libXres development package
+      Group: System/Libraries
+      Requires:
+          - xorg-x11-filesystem
+
